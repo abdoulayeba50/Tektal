@@ -9,10 +9,19 @@
 <body>
   <a href="index.html" class="back-link">← Retour à l'accueil</a>
 
-  <div class="container">
-    <h1 class="title">Recherche d’itinéraire</h1>
-    <p style="color: white; margin-top: 10px;">(Page en construction 🛠️)</p>
+  <div class="itineraire-form">
+    <h1>Recherche<br>d’itinéraire</h1>
+    <form>
+      <label for="depart-itineraire">Départ</label>
+      <input type="text" id="depart-itineraire" name="depart" placeholder="Départ" required/>
+
+      <label for="arrivee-itineraire">Arrivée</label>
+      <input type="text" id="arrivee-itineraire" name="arrivee" placeholder="Arrivée" required/>
+
+      <button type="submit">Rechercher</button>
+    </form>
   </div>
+  
 </body>
 
 </html>

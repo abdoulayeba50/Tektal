@@ -113,49 +113,94 @@ header {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-  header {
-    display: block;
+@media (max-width: 500px) {
+  .itineraire-form {
+    padding: 1.5rem;
+    max-width: 70%; /* prend moins de largeur */
   }
 
-  .title {
-    font-size: 28px;
+  .itineraire-form h1 {
+    font-size: 1.4rem;
   }
 
-  .btn,
-  .secondary-button {
-    font-size: 14px;
-    padding: 12px 20px;
-  }
-
-  .back-link {
-    top: 10px;
-    left: 10px;
-    padding: 8px 12px;
-    font-size: 14px;
+  .itineraire-form input,
+  .itineraire-form button {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
   }
 }
+
 
 
 
 
 /****************************Recherche************************/
 
-.back-link {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  text-decoration: none;
+
+.itineraire-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 480px; /* élargi un peu pour le titre */
+  margin: 3rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.itineraire-form h1 {
+  font-size: clamp(1.4rem, 4vw, 1.8rem); /* taille responsive */
+  color: #0b1a39;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+  text-align: center; /* centré */
+  white-space: nowrap; /* pas de retour à la ligne */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itineraire-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.itineraire-form input[type="text"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #0b1a39;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+}
+
+.itineraire-form button {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background-color: #f7941d;
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px 15px;
-  border-radius: 8px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.back-link:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+.itineraire-form button:hover {
+  background-color: #e58212;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .itineraire-form h1 {
+    font-size: 1.5rem;
+  }
+
+  .itineraire-form input,
+  .itineraire-form button {
+    font-size: 0.95rem;
+  }
 }
 
 
