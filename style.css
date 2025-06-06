@@ -5,39 +5,27 @@
   box-sizing: border-box;
 }
 
-/* Police générale */
+/* Police générale et fond */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #05214c; /* Bleu foncé */
   color: white;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-/* Burger menu */
-header {
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: 100%;
-  display: none; /* Affiché seulement en responsive */
 }
 
-.burger {
-  position: absolute;
-  top: 30px;      /* Distance depuis le haut */
-  left: 20px;     /* Distance depuis la gauche */
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
-/* Contenu centré */
+/* Conteneur centré */
 .container {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
 /* Logo */
@@ -54,6 +42,7 @@ header {
 .title {
   font-size: 36px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 /* Bouton principal */
@@ -68,30 +57,82 @@ header {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .btn:hover {
   background-color: #f0f0f0;
 }
 
-/* Bouton secondaire */
+/* Bouton secondaire (lien jaune) */
 .secondary-button {
-  color: #FFB800; /* Jaune */
+  color: #FFB800;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  text-decoration: none;
 }
 
 .secondary-button:hover {
   opacity: 0.8;
 }
 
-/* Responsive : afficher le menu burger */
+/* Lien retour */
+.back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.back-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Burger menu */
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  display: none;
+}
+
+.burger {
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
   header {
-    display: flex;
-    height: 70px;
+    display: block;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .btn,
+  .secondary-button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .back-link {
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
   }
 }
 
@@ -133,4 +174,57 @@ header {
 
 .secondary-button:hover {
   opacity: 0.8;
+}
+
+
+/* Conteneur centré (déjà présent mais on optimise un peu) */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Important pour petits écrans */
+  text-align: center;
+}
+
+/* Titre */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Responsive: adapter la taille des titres sur mobile */
+@media (max-width: 600px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .btn,
+  .secondary-button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .back-link {
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+/**************************************Burger menu***************************/
+.burger-menu {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  display: none;
+  z-index: 100;
+  min-width: 150px;
+  text-align: left;
 }
