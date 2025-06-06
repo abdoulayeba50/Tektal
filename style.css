@@ -1,0 +1,136 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Police générale */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #05214c; /* Bleu foncé */
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Burger menu */
+header {
+  position: relative;
+  width: 100%;
+  display: none; /* Affiché seulement en responsive */
+}
+
+.burger {
+  position: absolute;
+  top: 30px;      /* Distance depuis le haut */
+  left: 20px;     /* Distance depuis la gauche */
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Contenu centré */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fa-location-dot {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Bouton principal */
+.btn {
+  background-color: white;
+  color: #0C2D5E;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Bouton secondaire */
+.secondary-button {
+  color: #FFB800; /* Jaune */
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.secondary-button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive : afficher le menu burger */
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    height: 70px;
+  }
+}
+
+
+
+
+/****************************Recherche************************/
+
+.back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+/****************************Voir les lignes************************/
+
+.secondary-button {
+  color: #FFB800; /* Jaune */
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  text-decoration: none; 
+}
+
+.secondary-button:hover {
+  opacity: 0.8;
+}
