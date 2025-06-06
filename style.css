@@ -273,3 +273,86 @@ header {
   min-width: 150px;
   text-align: left;
 }
+
+
+
+/*******************************Connexion****************************/
+
+.connexion-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.connexion-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #0b1a39;
+}
+
+.connexion-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.connexion-container input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.connexion-container button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.connexion-container button:hover {
+  background-color: blue;
+}
+.connexion-link {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin-top: -10px; /* fait remonter le bouton */
+}
+
+/* Si nécessaire : renforcer la couleur du texte dans le bouton */
+.connexion-link .secondary-button {
+  color: #fff;
+}
+
+
+/* Responsive : Page Connexion */
+@media (max-width: 600px) {
+  .connexion-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .connexion-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .connexion-container input,
+  .connexion-container button {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+}
